@@ -9,7 +9,15 @@ A projektet készítették:
 ## Futtatás
 A program futtatásának elkezdéséhez egy FEN bemenetre van szükség. Az alábbi linken matt 3 lépésben feladványok találhatóak: https://wtharvey.com/m8n3.txt.
 
+<p align="center">
+<img width=200 src="./pictures/FEN.png">
+</p>
+
 A kiválasztott FEN bemásolása után, ha a feladvány nem megoldható kiírja, hogy "Nincsen matt 3 lépésből". (A fenti linken minden feladvány megoldható 3 lépésben, nemleges válaszért a https://wtharvey.com/m8n4.txt linken találhatóak 4 lépésben megoldható feladványok.)
+
+<p align="center">
+<img width=200 src="./pictures/ne.png">
+</p>
 
 Ha a feladvány megoldható, megad egy lehetséges első lépést, majd az ellenfél válaszát kéri, megjeleníti a jelenlegi állást a sakktáblán és kiírja a lehetséges összes lépését az ellenfélnek. Így megadhatjuk akár a saját lépésünket is a feladványban szereplő lépés mellett. 
 
