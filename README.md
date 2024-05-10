@@ -21,6 +21,36 @@ A kiválasztott FEN bemásolása után, ha a feladvány nem megoldható kiírja,
 
 Ha a feladvány megoldható, megad egy lehetséges első lépést, majd az ellenfél válaszát kéri, megjeleníti a jelenlegi állást a sakktáblán és kiírja a lehetséges összes lépését az ellenfélnek. Így megadhatjuk akár a saját lépésünket is a feladványban szereplő lépés mellett. 
 
-Ha ez megtörtént a program megadja a választott lépésre a matthoz vezető következő lehetséges lépést és újból az ellenfél lépését kéri. 
+<p align="center">
+<img width=500 src="./pictures/m1.png">
+</p>
 
-Végezetül megadja a mattot.
+Ha véletlen nem szabályos lépést adunk meg, akkor új bemenetet kér a program: 
+
+<p align="center">
+<img width=200 src="./pictures/illegal_move.png">
+</p>
+
+Ha jó a megadott lépése az ellenfélnek, akkor ezt is megjeleníti:
+
+<p align="center">
+<img width=350 src="./pictures/m2.png">
+</p>
+
+Majd a program megadja a választott lépésre a matthoz vezető következő lehetséges lépést és újból az ellenfél lépését kéri. 
+
+<p align="center">
+<img width=350 src="./pictures/m3.png">
+</p>
+
+Az ellenfél következő lépése: 
+
+<p align="center">
+<img width=350 src="./pictures/m4.png">
+</p>
+
+Végezetül a matt:
+
+<p align="center">
+<img width=350 src="./pictures/m5.png">
+</p>
