@@ -131,7 +131,6 @@ def solver(board, x):
   return print("There is no checkmate in 3 moves")
 
 #ellenfél lépését bekérjük
-
 def opp_move(board):
   moves = list(board.legal_moves)
   print("Possible moves: ")
@@ -150,7 +149,6 @@ def opp_move(board):
   return board
 
 #összefogjuk a gép és játékos által adott lépéseket és vizualizáljuk
-
 def start_solving():
   board = chess.Board()
   first = True
