@@ -49,12 +49,12 @@ def solver(board, x):
         board2 = chess.Board(board1.fen())
 
         in2 = True
-        pot_3 = True
+        pot_1 = True
 
         board2.push(m2)
 
         if result(board2, x) <= 0: #kikaptunk/patt új 1. lépés
-          pot_3 = False
+          pot_1 = False
           break
 
         else:
@@ -68,7 +68,7 @@ def solver(board, x):
               continue
 
             elif result(board3, x) == 1: #nyertünk, ellenfél lépésén tovább iterálunk
-              pot_3 = True
+              pot_1 = True
               break
 
           for m3 in move3:
@@ -79,7 +79,7 @@ def solver(board, x):
               continue
 
             elif result(board3, x) == 1: #nyertünk, ellenfél lépésén tovább iterálunk
-              pot_3 = True
+              pot_1 = True
               break
 
             else:
@@ -88,13 +88,13 @@ def solver(board, x):
               for m4 in move4:
                 board4 = chess.Board(board3.fen())
 
-                pot_3 = True
-                pot_5 = False
+                pot_1 = True
+                pot_2 = False
 
                 board4.push(m4)
 
                 if result(board4, x) <= 0: #kikaptunk/patt új 3. lépés
-                  pot_3 = False
+                  pot_1 = False
                   break
 
                 else:
@@ -105,21 +105,21 @@ def solver(board, x):
                     board5.push(m5)
 
                     if result(board5, x) == 1: #nyertünk, ellenfél lépésén tovább iterálunk
-                      pot_5 = True #van
+                      pot_2 = True #van
                       in2 = False
                       break
 
-                  if not pot_5:  #nincs nyerő lépés egyik esetben (nincs potenciál), ezért 3. lépésben tovább iterálunk
-                    pot_3 = False
+                  if not pot_2:  #nincs nyerő lépés egyik esetben (nincs potenciál), ezért 3. lépésben tovább iterálunk
+                    pot_1 = False
                     break
 
-              if pot_3:
+              if pot_1:
                 break
 
-          if not pot_3:
+          if not pot_1:
             break
 
-      if pot_3:
+      if pot_1:
         solution = m1
         if in2:
           return m1
